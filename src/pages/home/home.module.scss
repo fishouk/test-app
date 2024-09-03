@@ -1,0 +1,53 @@
+.homeContainer {
+    padding: 64px 16px;
+}
+
+.homeTitle {
+    margin-bottom: 64px;
+}
+
+.homeButtonContainer {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.homeDivsContainer {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.homeDiv {
+    width: calc(20% - 16px);
+    aspect-ratio: 1/1;
+}
+
+.homeDivSlideIn {
+    animation: slide-in 0.5s linear;
+}
+
+.homeDivSlideOut {
+    animation: slide-out 0.5s linear;
+}
+
+@keyframes slide-in {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: calc(20% - 16px);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

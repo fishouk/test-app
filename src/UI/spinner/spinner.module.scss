@@ -1,0 +1,39 @@
+.loadingSpinnerWrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loadingSpinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--color-red-100);
+    border-radius: 100%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+.loading-spinner__centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes spin {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
